@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.ant-typography{
+  color: white;
+}
+
 
 .fullscreen-spinner {
   display: flex;

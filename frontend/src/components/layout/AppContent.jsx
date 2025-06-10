@@ -13,6 +13,7 @@ const CoinIcon = styled.img`
   width: 24px;
   height: 24px;
   margin-right: 8px;
+  filter: brightness(0) invert(1);
 `;
 
 export default function AppContent() {

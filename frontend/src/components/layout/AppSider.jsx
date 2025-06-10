@@ -3,6 +3,7 @@ import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
 import { capitalize } from "../../utils";
 import { useCrypto } from "../../context/crypto-context";
 import styled from "styled-components";
+import "../../index.css";
 
 const StyledSider = styled(Layout.Sider)`
   padding: 1rem;
@@ -52,18 +53,27 @@ export default function AppSider() {
   if (!portfolioAssets.length) {
     return (
       <StyledSider width="25%">
-        <Typography.Title level={4} style={{ marginBottom: 20 }}>
-          Your Portfolio
+        <Typography.Title
+          level={4}
+          style={{
+            marginBottom: 20,
+            color: "rgb(255, 255, 255)",
+          }}
+        >
+          Ваш портфель
         </Typography.Title>
-        <Empty description="No assets in portfolio" />
+        <Empty description="Нет активов в портфеле" />
       </StyledSider>
     );
   }
 
   return (
     <StyledSider width="25%">
-      <Typography.Title level={4} style={{ marginBottom: 20 }}>
-        Your Portfolio
+      <Typography.Title
+        level={4}
+        style={{ marginBottom: 20, color: "rgb(255, 255, 255)" }}
+      >
+        Ваш портфель
       </Typography.Title>
       {portfolioAssets.map((asset) => (
         <StyledCard key={asset.id}>
@@ -80,12 +90,12 @@ export default function AppSider() {
             size="small"
             dataSource={[
               {
-                title: "Total Profit",
+                title: "Общая прибыль",
                 value: asset.totalProfit,
                 withTag: true,
               },
-              { title: "Asset Amount", value: asset.amount, isPlain: true },
-              { title: "Purchase Price", value: asset.price, isPrice: true },
+              { title: "Количество", value: asset.amount, isPlain: true },
+              { title: "Цена покупки", value: asset.price, isPrice: true },
             ]}
             renderItem={(item) => (
               <List.Item>

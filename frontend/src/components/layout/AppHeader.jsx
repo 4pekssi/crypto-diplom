@@ -22,7 +22,7 @@ const StyledSelect = styled(Select)`
     align-items: center;
     gap: 8px;
   }
-`;
+`;        
 
 export default function AppHeader({ activeTab, onTabChange }) {
   const [select, setSelect] = useState(false);

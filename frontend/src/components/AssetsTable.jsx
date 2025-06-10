@@ -39,6 +39,10 @@ export default function AssetsTable() {
       dataIndex: "name",
       defaultSortOrder: "descend",
       sorter: (a, b) => a.name.localeCompare(b.name),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Цена покупки, $",
@@ -46,6 +50,10 @@ export default function AssetsTable() {
       defaultSortOrder: "descend",
       sorter: (a, b) => a.price - b.price,
       render: (value) => value.toFixed(2),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Текущая цена, $",
@@ -53,13 +61,21 @@ export default function AssetsTable() {
       defaultSortOrder: "descend",
       sorter: (a, b) => a.currentPrice - b.currentPrice,
       render: (value) => value.toFixed(2),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Количество",
       dataIndex: "amount",
       defaultSortOrder: "descend",
       sorter: (a, b) => a.amount - b.amount,
-      render: (value) => value.toFixed(8),
+      render: (value) => value.toFixed(4),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Общая сумма, $",
@@ -67,6 +83,10 @@ export default function AssetsTable() {
       defaultSortOrder: "descend",
       sorter: (a, b) => a.totalAmount - b.totalAmount,
       render: (value) => value.toFixed(2),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Прибыль/Убыток",
@@ -78,6 +98,10 @@ export default function AssetsTable() {
           {value.toFixed(2)}$ ({record.growPercent}%)
         </Typography.Text>
       ),
+      sortDirections: ["descend", "ascend"],
+      showSorterTooltip: {
+        title: "Нажмите для отмены сортировки",
+      },
     },
     {
       title: "Действия",
